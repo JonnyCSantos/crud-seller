@@ -1,7 +1,7 @@
 <?php
 include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/class/ClassConnection.php");
 
-class ClassCrud extends ClassConnection {
+class ClassCrudSeller extends ClassConnection {
     #Atributos
     private $Crud;
     private $Counter;

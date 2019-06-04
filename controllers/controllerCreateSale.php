@@ -1,22 +1,25 @@
 <?php
 include("../helpers/variables.php");
 
-include("../Class/ClassCrud.php");
+include("../Class/ClassCrudSale.php");
 
-$Crud=new ClassCrud();
+$Crud=new ClassCrudSale();
 
 if($Acao=='Cadastrar'){
     $Crud->insertDB(
-        "sellers",
-        "?,?,?",
+        "sales",
+        "?,?,?,?,?",
         array(
-            $Id,
-            $Nome,
-            $Email
+            $Id_sale,
+            $Valor,
+            $Comissao,
+            $Data,
+            $Id_vendedor
         )
     );
 
     echo "Cadastro Realizado com Sucesso!";
+
 } else {
     $Crud->updateDB(
         "sellers",

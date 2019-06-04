@@ -13,8 +13,8 @@
 <header class="container">
     <nav class="menu">
         <ul>
-            <li><a href="create">Cadastrar Vendedor</a></li>
-            <li><a href="create">Cadastrar Venda</a></li>
+            <li><a href="createSeller">Cadastrar Vendedor</a></li>
+            <li><a href="createSale">Cadastrar Venda</a></li>
             <li><a href="read-sellers">Visualizar Vendedores</a></li>
             <li><a href="read-sales">Visualizar Vendas</a></li>
         </ul>

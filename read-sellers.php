@@ -1,5 +1,5 @@
 <?php include("components/header.php"); 
-include("class/ClassCrud.php");
+include("class/ClassCrudSeller.php");
 ?>
 
 <table class="TabelaCrud container">
@@ -12,7 +12,7 @@ include("class/ClassCrud.php");
 
      <!-- Estrutura de loop -->
      <?php
-     $Crud=new ClassCrud();
+     $Crud=new ClassCrudSeller();
      $BFetch=$Crud->selectDB(
          "*",
          "sellers",
@@ -28,7 +28,7 @@ include("class/ClassCrud.php");
          <td><?php echo $Fetch['Email']; ?></td>
          <td>
              <a href="<?php echo "components/formCreateSeller.php?id={$Fetch['Id']}"; ?>"><img src="Images/Edite.png" alt="Editar"></a>
-             <a href="<?php echo "controllers/controllerDelete.php?id={$Fetch['Id']}"; ?>" class="delete"><img src="Images/Lixeira.png" alt="Deletar"></a>
+             <a href="<?php echo "controllers/controllerDeleteSeller.php?id={$Fetch['Id']}"; ?>" class="delete"><img src="Images/Lixeira.png" alt="Deletar"></a>
          </td>
      </tr>
      <?php } ?>

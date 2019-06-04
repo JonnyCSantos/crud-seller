@@ -1,10 +1,10 @@
 <?php
-include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/Class/ClassCrud.php");
+include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/Class/ClassCrudSeller.php");
     /* Edição de dados */
     if(isset($_GET['id'])){
         $Acao="Editar";
 
-        $Crud=new ClassCrud();
+        $Crud=new ClassCrudSeller();
         $BFetch=$Crud->selectDB("*","sellers","where Id=?",array($_GET['id']));
         $Fetch=$BFetch->fetch(PDO::FETCH_ASSOC);
         $Id=$Fetch['Id'];
@@ -24,10 +24,10 @@ include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/Class/ClassCrud.php");
 <div class="result"></div>
 
 <div class="Formulario">
-    <h1 class="Center">Cadastro</h1>
+    <h1 class="Center">Cadastro de Vendedor</h1>
 
-    <form name="FormCadastro" id="FormCadastro" method="post" action="../controllers/controllerCreate.php">
-        <input type="text" id="Acao" name="Acao" value="<?php echo $Acao; ?>">
+    <form name="FormCadastro" id="FormCadastro" method="post" action="../controllers/controllerCreateSeller.php">
+        <input type="hidden" id="Acao" name="Acao" value="<?php echo $Acao; ?>">
         <input type="hidden" id="Id" name="Id" value="<?php echo $Id; ?>">
 
         <div class="FormularioInput">

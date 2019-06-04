@@ -4,7 +4,7 @@ $("#FormCadastro").on('submit', function (event) {
     var dados= $(this).serialize();
     
     $.ajax({
-        url: 'controllers/controllerCreate.php',
+        url: 'controllers/controllerCreateSeller.php',
         type: 'post',
         dataType: 'html',
         data: dados,
