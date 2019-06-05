@@ -28,12 +28,12 @@ include("class/ClassCrudSeller.php");
          <td><?php echo $Fetch['Email']; ?></td>
          <td>
              <a href="<?php echo "components/formCreateSeller.php?id={$Fetch['Id']}"; ?>"><img src="Images/Edite.png" alt="Editar"></a>
-             <a href="<?php echo "controllers/controllerDeleteSeller.php?id={$Fetch['Id']}"; ?>" class="delete"><img src="Images/Lixeira.png" alt="Deletar"></a>
+             <button data-href="<?php echo "controllers/controllerDeleteSeller.php?id={$Fetch['Id']}"; ?>" class="delete">Excluir</button>
          </td>
      </tr>
      <?php } ?>
 </table>
 
-<div class="res"></div>
+<div class="result"></div>
 
 <?php include("components/footer.php"); ?>

@@ -1,37 +1,22 @@
 <?php
-include("../helpers/variables.php");
+include("../helpers/variablesSales.php");
 
-include("../Class/ClassCrudSale.php");
+include("../class/ClassCrudSeller.php");
 
-$Crud=new ClassCrudSale();
+$Crud=new ClassCrudSeller();
+$ComissaoVendedor = ($Valor*8.5)/100;
+echo $ComissaoVendedor;
 
-if($Acao=='Cadastrar'){
-    $Crud->insertDB(
+$Crud->insertDB(
         "sales",
         "?,?,?,?,?",
         array(
-            $Id_sale,
+            $Id,
             $Valor,
-            $Comissao,
+            $ComissaoVendedor,
             $Data,
             $Id_vendedor
         )
-    );
+);
 
-    echo "Cadastro Realizado com Sucesso!";
-
-} else {
-    $Crud->updateDB(
-        "sellers",
-        "Nome=?,Email=?",
-        "Id=?",
-        array(
-            $Nome,
-            $Email,
-            $Id
-        )
-    );
-
-    echo "Cadastro Editado com Sucesso!";
-}
-
+echo "Cadastro Realizado com Sucesso!";

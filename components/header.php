@@ -15,8 +15,8 @@
         <ul>
             <li><a href="createSeller">Cadastrar Vendedor</a></li>
             <li><a href="createSale">Cadastrar Venda</a></li>
-            <li><a href="read-sellers">Visualizar Vendedores</a></li>
-            <li><a href="read-sales">Visualizar Vendas</a></li>
+            <li><a href="search-sellers">Visualizar Vendedores</a></li>
+            <li><a href="search-sales">Visualizar Vendas</a></li>
         </ul>
     </nav>
 </header>
