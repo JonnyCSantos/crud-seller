@@ -1,0 +1,11 @@
+.footer {
+    &__wrapper {
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff;
+    }
+    &__copy {
+        font-size: 10pt;
+    }
+}

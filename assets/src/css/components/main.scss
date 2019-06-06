@@ -10,7 +10,7 @@
     &__nav {
         margin-top: 10px;
         padding: 20px 20px 20px 0;
-        height: 100vh;
+        height: calc(100vh - 114px);
     }
     &__menu {
         padding: 0;
@@ -41,19 +41,50 @@
 .content {
     flex: 1 1 auto;
     margin-top: 30px;
+    padding: 0 20px 20px 20px;
     &__header {
         display: flex;
         justify-content: space-between;
+        h2 {
+            color: $cor02;
+        }
     }
-    // &__search {
-
-    // }
+    &__search {
+        form#FormSearchSales {
+            display: flex;
+            align-items: center;
+            input[type="text"] {
+                background-color: #fff;
+                border: none;
+                padding: 10px;
+            }
+            input[type="submit"] {
+                background-color: $cor01;
+                border: none;
+                padding: 10px;
+                color: #fff;
+                font-weight: 400;
+            }
+        }
+    }
+    &__table {
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        tr {
+            width: 100%;
+            &.first {
+                td {
+                    font-weight: 600;
+                }
+            }
+            td {
+                padding: 10px;
+                color: $cor02;
+            }
+        }
+    }
+    p.showing {
+        margin-top: 40px;
+    }
 }
-
-
-
-
-.TabelaCrud{width: 100%; text-align: center;}
-.TabelaCrud tr:nth-child(2n -1){background: #CCC;}
-.TabelaCrud tr:first-child{background: #000; color:#fff; font-weight: bold; font-size: 20px;}
-.TabelaCrud td{width: 25%;}

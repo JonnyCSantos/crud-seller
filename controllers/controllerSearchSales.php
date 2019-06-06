@@ -1,11 +1,11 @@
 <?php
-include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/class/ClassCrudSeller.php");
+include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/class/ClassCrud.php");
 
 $Id_vendedor=filter_input(INPUT_GET,'Id_vendedor',FILTER_SANITIZE_SPECIAL_CHARS);
 ?>
 
-<table class="TabelaCrud container">
-     <tr>
+<table class="content__table">
+     <tr class="first">
          <td>Id</td>
          <td>Nome</td>
          <td>E-mail</td>
@@ -13,10 +13,9 @@ $Id_vendedor=filter_input(INPUT_GET,'Id_vendedor',FILTER_SANITIZE_SPECIAL_CHARS)
          <td>Valor da Venda</td>
          <td>Data</td>
      </tr>
-
      <!-- Estrutura de loop -->
      <?php
-     $Crud=new ClassCrudSeller();
+     $Crud=new ClassCrud();
      $BFetch=$Crud->selectDB(
          "sellers.Id, sellers.Nome, sellers.Email, sales.Comissao, sales.Valor, sales.Data",
          "sellers JOIN sales",
@@ -38,6 +37,6 @@ $Id_vendedor=filter_input(INPUT_GET,'Id_vendedor',FILTER_SANITIZE_SPECIAL_CHARS)
      </tr>
      <?php } ?>
      <tr>
-        <p>Mostrando <?php echo $count;?> venda(s) para este vendedor.</p>
+        <p class="showing">Mostrando <?php echo $count;?> venda(s) para este vendedor.</p>
      </tr>
 </table>

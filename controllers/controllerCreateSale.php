@@ -1,9 +1,9 @@
 <?php
 include("../helpers/variablesSales.php");
 
-include("../class/ClassCrudSeller.php");
+include("../class/ClassCrud.php");
 
-$Crud=new ClassCrudSeller();
+$Crud=new ClassCrud();
 $ComissaoVendedor = ($Valor*8.5)/100;
 echo $ComissaoVendedor;
 

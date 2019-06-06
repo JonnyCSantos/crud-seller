@@ -28,6 +28,8 @@ $(".delete").on('click', function (event) {
 
 $("#FormSearchSales").on('submit', function (event) {
     event.preventDefault();
+    $('.content__table').remove();
+    $('.showing-all').remove();
     var dados= $(this).serialize();
     $.ajax({
         url: 'controllers/controllerSearchSales.php?' + dados,

@@ -1,7 +1,7 @@
 <?php
 include("{$_SERVER['DOCUMENT_ROOT']}/crud-seller/class/ClassConnection.php");
 
-class ClassCrudSeller extends ClassConnection {
+class ClassCrud extends ClassConnection {
     #Atributos
     private $Crud;
     private $Counter;
@@ -10,7 +10,6 @@ class ClassCrudSeller extends ClassConnection {
     private function preparedStatements($Query , $Parameters){
         $this->countParameters($Parameters);
         $this->Crud=$this->conectDB()->prepare($Query);
-        echo $this->Counter;
 
         if($this->Counter > 0) {
             for($i = 1; $i <= $this->Counter; $i++) {
