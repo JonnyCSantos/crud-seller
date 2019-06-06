@@ -1,0 +1,25 @@
+$cor01: #2ca01c;
+$cor02: #393a3d;
+$cor03: #eceef1;
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $cor03;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "crud-seller",
+  "version": "1.0.0",
+  "description": "crud with php pdo ",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonnyCSantos/crud-seller.git"
+  },
+  "keywords": [
+    "crud-seller"
+  ],
+  "author": "Jonathan Castro dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonnyCSantos/crud-seller/issues"
+  },
+  "homepage": "https://github.com/JonnyCSantos/crud-seller#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-live-server": "0.0.31",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
+  }
+}
