@@ -21,7 +21,7 @@ include("class/ClassCrud.php");
                         </form>
                     </div>
                 </div>
-                <div class="content_main">
+                <div class="content__main">
                     <div class="result"></div>
                     <table class="content__table">
                         <tr class="first">

@@ -1,9 +1,9 @@
 <?php
 include("../helpers/variables.php");
 
-include("../Class/ClassCrudSeller.php");
+include("../Class/ClassCrud.php");
 
-$Crud=new ClassCrudSeller();
+$Crud=new ClassCrud();
 
 if($Acao=='Cadastrar'){
     $Crud->insertDB(
@@ -29,6 +29,6 @@ if($Acao=='Cadastrar'){
         )
     );
 
-    echo "Cadastro Editado com Sucesso!";
+    echo "Cadastro Editado com Sucesso! <a href='/crud-seller/search-sellers'>Voltar</a>";
 }
 

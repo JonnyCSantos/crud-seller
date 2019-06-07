@@ -5,7 +5,6 @@ include("../class/ClassCrud.php");
 
 $Crud=new ClassCrud();
 $ComissaoVendedor = ($Valor*8.5)/100;
-echo $ComissaoVendedor;
 
 $Crud->insertDB(
         "sales",
@@ -19,4 +18,4 @@ $Crud->insertDB(
         )
 );
 
-echo "Cadastro Realizado com Sucesso!";
+echo "Cadastro Realizado com Sucesso! Comissão de R$" . number_format($ComissaoVendedor,2,",",".");;

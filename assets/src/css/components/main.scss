@@ -83,7 +83,47 @@
                 color: $cor02;
             }
         }
+        a, button {
+            background-color: $cor01;
+            border: none;
+            padding: 10px;
+            color: #fff;
+            font-size: 12pt;
+            font-weight: 400;
+            margin-top: 0px;
+            text-decoration: none;
+            &:hover {
+                opacity: .8;
+            }
+            &.delete {
+                background-color: #c30000;
+                cursor: pointer;
+            }
+        }
     }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__main {
+        input[type="text"] {
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            min-width: 350px;
+        }
+        input[type="submit"] {
+            background-color: $cor01;
+            border: none;
+            padding: 10px;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 10px;
+            min-width: 350px;
+            margin-bottom: 20x;
+        }
+    }
+        
     p.showing {
         margin-top: 40px;
     }

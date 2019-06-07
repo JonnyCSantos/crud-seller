@@ -1,4 +1,3 @@
-// Print messagem succefull into resultado div
 $("#FormCadastro").on('submit', function (event) {
     event.preventDefault();
     var dados= $(this).serialize();
@@ -11,19 +10,28 @@ $("#FormCadastro").on('submit', function (event) {
         success: function(dados){
             $('.result').show().html(dados);
         }
-    })
+    });
+    setTimeout(function(){
+        location.reload();
+    },1500);
 });
 
-$(".delete").on('click', function (event) {
+$("#FormCreateSale").on('submit', function (event) {
     event.preventDefault();
-    var url = $(this).attr('data-href');
-    console.log(url);
+    var dados= $(this).serialize();
+    
     $.ajax({
-        url: url,
-        success: function(){
-            $('.result').show().html('<span>Vendedor removido com sucesso!</span>');
+        url: 'controllers/controllerCreateSale.php',
+        type: 'post',
+        dataType: 'html',
+        data: dados,
+        success: function(dados){
+            $('.result').show().html(dados);
         }
-    })
+    });
+    setTimeout(function(){
+        location.reload();
+    },1500);
 });
 
 $("#FormSearchSales").on('submit', function (event) {
@@ -41,6 +49,9 @@ $("#FormSearchSales").on('submit', function (event) {
         }
     })
 });
+
+
+
 
 /* Confirmar antes de deletar os dados */
 $('.delete').on('click',function(event){

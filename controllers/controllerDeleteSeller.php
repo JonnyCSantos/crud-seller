@@ -1,8 +1,8 @@
 <?php
 
-include("../class/ClassCrudSeller.php");
+include("../class/ClassCrud.php");
 
-$Crud=new ClassCrudSeller();
+$Crud=new ClassCrud();
 $IdUser=filter_input(INPUT_GET,'id',FILTER_SANITIZE_SPECIAL_CHARS);
 
 $Crud->deleteDB(
@@ -13,4 +13,5 @@ $Crud->deleteDB(
     )
 );
 
-echo "Dado deletado com sucesso!";
+echo "Dado deletado com sucesso! <a href='/crud-seller/search-sellers'>Voltar</a>";
+
